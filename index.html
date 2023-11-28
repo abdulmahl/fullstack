@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form name="bookForm">
+        <fieldset>
+          <p>
+            <label for="name">Book: </label>
+            <input type="text" id="bookname" placeholder="Book Name" required />
+          </p>
+          <p>
+            <label for="country">Author Name: </label>
+            <input type="text" id="author" value="" required />
+          </p>
+          <p>
+            <label for="aboutBook">About: </label>
+            <input
+              type="text"
+              id="aboutBook"
+              required
+            />
+          </p>
+          <p class="isOwned">
+            <label for="isOwned">Owned: </label>
+            <input type="checkbox" id="isOwned" value="yes" />
+          </p>
+          <p class="buttons">
+            <button id="btnAdd">Add Book</button>
+            <button id="btnUpdate">Update Book</button>
+            <button id="btnDelete">Delete Book</button>
+            <button id="btnClear">Reset Form</button>
+          </p>
+        </fieldset>
+      </form>
+
+      <div class="listHeader">List of Books</div>
+      <div class="list-bar">
+      </div>
+    
+    <script type="module" src="js.js"></script>
+</body>
+</html>
