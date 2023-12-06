@@ -1,11 +1,19 @@
-import ListGroup from "./components/ListGroup.tsx";
+import { useState } from "react";
+import Alert from "./components/Alert";
+import Button from "./components/Button";
+
 //React uses PascalCasing!
 const App = () => {
   // JSX: JavaScript XML.
-  let items = ["Randburg", "Cap City", "London", "New York", "Rome"];
+  const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <>
-    <ListGroup items={items} heading="Cities" />
+      { alertVisible && <Alert onClose={() => setAlertVisibility(false)}>
+        Hello <strong>Anubis!</strong>
+      </Alert>}
+      <Button color="success" onClick={ () => setAlertVisibility(true)} >
+        Alert Button!
+      </Button>
     </>
   );
 };
